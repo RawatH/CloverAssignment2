@@ -69,14 +69,16 @@ class CharacterFragment : BaseFragment(), ItemClickListener<CharacterVO> {
         //
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                TODO("Not yet implemented")
+
                 //Observable stream with rx
                 viewModel.getcharacterByName(query)
+                return true
 
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                TODO("Not yet implemented")
+                Log.d("","--")
+                return true
             }
 
         })
